@@ -25,21 +25,16 @@ html {
   padding-left: 1em;
 }
 
-[class^='col-xs-'],
-[class*=' col-xs-'] {
+[class^='col-'],
+[class*=' col-'] {
   float: left;
 }
 
-.col-xs-12 {
+.col-12 {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  [class^='col-md-'],
-  [class*=' col-md-'] {
-    float: left;
-  }
-
   .col-md-3 {
     width: 25%;
   }
@@ -54,11 +49,6 @@ html {
 }
 
 @media (min-width: 1200px) {
-  [class^='col-xl-'],
-  [class*=' col-xl-'] {
-    float: left;
-  }
-
   .col-xl-2 {
     width: 16.666667%;
   }
