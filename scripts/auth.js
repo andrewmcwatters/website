@@ -1,23 +1,23 @@
 'use strict';
 {
   /**
-   * Sign in form
+   * Sign in form.
    */
   const FORM = document.forms['sign-in'];
 
   /**
-   * Query selector
+   * Query selector.
    */
   let $ = FORM.querySelector.bind(FORM);
 
   /**
-   * Non-form elements
+   * Non-form elements.
    */
   const FORGOT_PASSWORD = $('.forgot-password');
   const MESSAGE         = $('.message');
 
   /**
-   * Sign in
+   * Sign in.
    */
   function onsubmit(event) {
     let form     = this;
@@ -38,7 +38,7 @@
   }
 
   /**
-   * Reset form validity
+   * Reset form validity.
    */
   function resetValidity(form) {
     for (let i = 0; i < form.elements.length; i++) {
@@ -47,14 +47,14 @@
   }
 
   /**
-   * Redirect to action URI
+   * Redirect to action URI.
    */
   function onsignin() {
     location.href = this.action;
   }
 
   /**
-   * Report sign in error
+   * Report sign in error.
    */
   function onsigninerror(error) {
     let form     = this;
@@ -75,7 +75,7 @@
   FORM.addEventListener('submit', onsubmit);
 
   /**
-   * Reset input validity
+   * Reset input validity.
    */
   function oninput(event) {
     this.setCustomValidity('');
@@ -87,7 +87,7 @@
   password.addEventListener('input', oninput);
 
   /**
-   * Create account
+   * Create account.
    */
   function oncreateaccount(event) {
     let form     = FORM;
@@ -116,7 +116,7 @@
   }
 
   /**
-   * Send email verification
+   * Send email verification.
    */
   function oncreateuser(user) {
     user
@@ -125,7 +125,7 @@
   }
 
   /**
-   * Display send email verification success message
+   * Display send email verification success message.
    */
   function onsendemailverification() {
     FORGOT_PASSWORD.hidden = true;
@@ -133,7 +133,7 @@
   }
 
   /**
-   * Report create user error
+   * Report create user error.
    */
   function oncreateusererror(error) {
     let form     = this;
@@ -155,7 +155,7 @@
   createAccount.addEventListener('click', oncreateaccount);
 
   /**
-   * Send password reset email
+   * Send password reset email.
    */
   function onforgotpassword(event) {
     let form  = FORM;
@@ -182,7 +182,7 @@
   }
 
   /**
-   * Display send password reset email success message
+   * Display send password reset email success message.
    */
   function onsendpasswordresetemail() {
     FORGOT_PASSWORD.hidden = true;
@@ -190,7 +190,7 @@
   }
 
   /**
-   * Report send password reset email error
+   * Report send password reset email error.
    */
   function onsendpasswordresetemailerror(error) {
     let form  = this;
@@ -204,7 +204,7 @@
   FORGOT_PASSWORD.addEventListener('click', onforgotpassword);
 
   /**
-   * Currently signed in
+   * Currently signed in.
    */
   firebase
     .auth()
