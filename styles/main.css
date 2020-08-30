@@ -15,7 +15,7 @@ footer {
   margin: 0.5in;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   header,
   main,
   footer {
