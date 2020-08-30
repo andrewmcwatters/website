@@ -12,7 +12,7 @@ main {
 header,
 main,
 footer {
-  margin: 0.5in;
+  margin: 15px;
 }
 
 @media (min-width: 768px) {
